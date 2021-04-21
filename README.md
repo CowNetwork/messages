@@ -1,2 +1,2 @@
 # messages
-Abstract library containing color constants and message helpers
+Abstract library containing color constants and message helpers.
