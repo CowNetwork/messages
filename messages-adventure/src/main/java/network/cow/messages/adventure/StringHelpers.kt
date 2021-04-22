@@ -50,3 +50,7 @@ fun String.inactive() = this.component(Colors.INACTIVE)
 fun String.formatToComponent(vararg params: Component, color: Color? = null) : Component = this.component(color).format(*params)
 fun String.formatToComponent(vararg params: Component, color: TextColor?) : Component = this.component(color).format(*params)
 fun String.formatToComponent(vararg params: Component, color: NamedTextColor?) : Component = this.component(color).format(*params)
+
+fun String.space() = this.comp().space()
+fun String.newline() = this.comp().newline()
+fun String.newlines(amount: Int) = this.comp().newlines(amount)
