@@ -12,7 +12,7 @@ object Colors {
     @JvmField val HIGHLIGHT = Color(255, 151, 216) // #FF97D8
     @JvmField val SEPARATOR = Color(90, 90, 90) // #5A5A5A
 
-    @JvmField val INFO = Color(150, 150, 150) // #969696
+    @JvmField val INFO = Color(199, 199, 199) // #C7C7C7
     @JvmField val SUCCESS = Color(163, 230, 53) // #A3E635
     @JvmField val WARNING = Color(245, 158, 11) // #F59E0B
     @JvmField val ERROR = Color(220, 38, 38) // #DC2626

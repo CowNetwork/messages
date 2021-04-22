@@ -11,7 +11,7 @@ object and are as follows.
 ![](https://badgen.net/badge/HIGHLIGHT/%23FF97D8?color=FF97D8)
 ![](https://badgen.net/badge/SEPARATOR/%235A5A5A?color=5A5A5A)
 
-![](https://badgen.net/badge/INFO/%23969696?color=969696)
+![](https://badgen.net/badge/INFO/%23C7C7C7?color=C7C7C7)
 ![](https://badgen.net/badge/SUCCESS/%23A3E635?color=A3E635)
 ![](https://badgen.net/badge/WARNING/%23F59E0B?color=F59E0B)
 ![](https://badgen.net/badge/ERROR/%23DC2626?color=DC2626)
