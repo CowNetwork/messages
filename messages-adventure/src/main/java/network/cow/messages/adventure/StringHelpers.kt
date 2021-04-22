@@ -1,8 +1,10 @@
 package network.cow.messages.adventure
 
 import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.text.format.TextColor
+import net.kyori.adventure.text.format.TextDecoration
 import network.cow.messages.core.Colors
 import java.awt.Color
 
@@ -22,6 +24,19 @@ fun String.componentBuilder(color: Color = Colors.INFO) = this.componentBuilder(
 fun String.componentBuilder(color: NamedTextColor) = this.componentBuilder(color as TextColor)
 fun String.componentBuilder(color: TextColor) = Component.text().content(this).color(color)
 
+fun String.prefix(prefix: Component) = prefix + " ｜ ".separator().decorate(TextDecoration.BOLD) + this
+fun String.prefix(prefix: TextComponent.Builder) = prefix + " ｜ ".separator().decorate(TextDecoration.BOLD) + this
+
+@JvmOverloads
+fun String.prefix(prefix: String, color: Color? = null) = this.prefix(prefix.component(color))
+fun String.prefix(prefix: String, color: TextColor?) = this.prefix(prefix.component(color))
+fun String.prefix(prefix: String, color: NamedTextColor?) = this.prefix(prefix.component(color))
+
+@JvmOverloads
+fun String.boxed(color: Color? = null) = "[".component(color) + this + "]".component(color)
+fun String.boxed(color: TextColor?) = "[".component(color) + this + "]".component(color)
+fun String.boxed(color: NamedTextColor?) = "[".component(color) + this + "]".component(color)
+
 fun String.chat() = this.component(Colors.CHAT)
 
 fun String.highlight() = this.component(Colors.HIGHLIGHT)
@@ -35,3 +50,7 @@ fun String.debug() = this.component(Colors.DEBUG)
 
 fun String.active() = this.component(Colors.ACTIVE)
 fun String.inactive() = this.component(Colors.INACTIVE)
+
+fun String.formatToComponent(color: Color? = null, vararg params: Component) : Component = this.component(color).format(*params)
+fun String.formatToComponent(color: TextColor?, vararg params: Component) : Component = this.component(color).format(*params)
+fun String.formatToComponent(color: NamedTextColor?, vararg params: Component) : Component = this.component(color).format(*params)

@@ -5,6 +5,7 @@ import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.format.TextDecoration
+import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer
 import network.cow.messages.core.Colors
 import java.awt.Color
 
@@ -70,6 +71,25 @@ fun Component.boxed(color: NamedTextColor?) = "[".component(color) + this + "]".
 
 @JvmOverloads fun TextComponent.Builder.active(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.ACTIVE.toTextColor(), cascadeType)
 @JvmOverloads fun TextComponent.Builder.inactive(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.INACTIVE.toTextColor(), cascadeType)
+
+fun TextComponent.format(vararg params: Component) : Component {
+    val format = this.content()
+    val color = this.color()
+
+    val placeholderRegex = Regex("(%\\d+\\\$s)")
+    val placeholders = placeholderRegex.findAll(format).map(MatchResult::value).toList()
+    val sections = format.split(placeholderRegex)
+
+    val serializedParams = params.map { GsonComponentSerializer.gson().serialize(it) }.toTypedArray()
+    var component = Component.empty()
+    sections.forEachIndexed { index, section ->
+        component = component.append(Component.text(section).color(color))
+        val placeholder = placeholders.getOrNull(index) ?: return@forEachIndexed
+        component = component.append(GsonComponentSerializer.gson().deserialize(placeholder.format(*serializedParams)))
+    }
+
+    return component
+}
 
 fun Component.space() = this.append(Component.space())
 fun Component.newline() = this.append(Component.newline())
