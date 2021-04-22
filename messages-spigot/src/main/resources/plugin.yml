@@ -1,0 +1,5 @@
+name: Messages
+main: network.cow.messages.spigot.MessagesPlugin
+api-version: 1.16
+version: 1.0.0
+author: Benedikt Wüller
