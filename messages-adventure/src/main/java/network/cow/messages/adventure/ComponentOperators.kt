@@ -17,9 +17,3 @@ operator fun Component.plus(component: TextComponent.Builder) = this.append(comp
 
 operator fun TextComponent.Builder.plus(component: Component) = this.append(component)
 operator fun TextComponent.Builder.plus(component: TextComponent.Builder) = this.append(component)
-
-fun test(): Component {
-    val acceptButton = "[Yes]".active().clickEvent(ClickEvent.runCommand("test"))
-    val denyButton = "[No]".inactive().clickEvent(ClickEvent.runCommand("test"))
-    return ("Are you sure you want to do this?".comp() + " " + acceptButton + " " + denyButton + " - ".separator() + "This will delete all data irreversibly.").warning()
-}

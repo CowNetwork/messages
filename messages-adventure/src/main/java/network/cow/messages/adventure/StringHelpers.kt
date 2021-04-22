@@ -12,14 +12,12 @@ import java.awt.Color
  * @author Benedikt Wüller
  */
 
-@JvmOverloads
 fun String.component(color: Color? = null) = this.component(color?.toTextColor())
 fun String.component(color: NamedTextColor?) = this.component(color as TextColor?)
 fun String.component(color: TextColor?) = Component.text(this).color(color)
 
 fun String.comp() = this.component()
 
-@JvmOverloads
 fun String.componentBuilder(color: Color = Colors.INFO) = this.componentBuilder(color.toTextColor())
 fun String.componentBuilder(color: NamedTextColor) = this.componentBuilder(color as TextColor)
 fun String.componentBuilder(color: TextColor) = Component.text().content(this).color(color)
@@ -27,12 +25,10 @@ fun String.componentBuilder(color: TextColor) = Component.text().content(this).c
 fun String.prefix(prefix: Component) = prefix + " ｜ ".separator().decorate(TextDecoration.BOLD) + this
 fun String.prefix(prefix: TextComponent.Builder) = prefix + " ｜ ".separator().decorate(TextDecoration.BOLD) + this
 
-@JvmOverloads
 fun String.prefix(prefix: String, color: Color? = null) = this.prefix(prefix.component(color))
 fun String.prefix(prefix: String, color: TextColor?) = this.prefix(prefix.component(color))
 fun String.prefix(prefix: String, color: NamedTextColor?) = this.prefix(prefix.component(color))
 
-@JvmOverloads
 fun String.boxed(color: Color? = null) = "[".component(color) + this + "]".component(color)
 fun String.boxed(color: TextColor?) = "[".component(color) + this + "]".component(color)
 fun String.boxed(color: NamedTextColor?) = "[".component(color) + this + "]".component(color)
@@ -51,6 +47,6 @@ fun String.debug() = this.component(Colors.DEBUG)
 fun String.active() = this.component(Colors.ACTIVE)
 fun String.inactive() = this.component(Colors.INACTIVE)
 
-fun String.formatToComponent(color: Color? = null, vararg params: Component) : Component = this.component(color).format(*params)
-fun String.formatToComponent(color: TextColor?, vararg params: Component) : Component = this.component(color).format(*params)
-fun String.formatToComponent(color: NamedTextColor?, vararg params: Component) : Component = this.component(color).format(*params)
+fun String.formatToComponent(vararg params: Component, color: Color? = null) : Component = this.component(color).format(*params)
+fun String.formatToComponent(vararg params: Component, color: TextColor?) : Component = this.component(color).format(*params)
+fun String.formatToComponent(vararg params: Component, color: NamedTextColor?) : Component = this.component(color).format(*params)
