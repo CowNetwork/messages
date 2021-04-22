@@ -19,11 +19,9 @@ enum class CascadeType {
 }
 
 fun Component.cascadeColor(color: TextColor, type: CascadeType = CascadeType.DEEP_ONLY_NULL) : Component {
-    if (type == CascadeType.NONE) return this.color(color)
-    return this.color(color).children(this.children().map {
-        if (type == CascadeType.DEEP_ONLY_NULL && it.color() != null) return@map it
-        it.cascadeColor(color, type)
-    })
+    if (type == CascadeType.NONE) return this
+    val mainColor = if (this.color() == null || type == CascadeType.DEEP_ALL) color else this.color()
+    return this.color(mainColor).children(this.children().map { it.cascadeColor(color, type) })
 }
 
 fun TextComponent.Builder.cascadeColor(color: TextColor, type: CascadeType = CascadeType.DEEP_ONLY_NULL) : TextComponent.Builder {
