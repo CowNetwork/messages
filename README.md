@@ -10,6 +10,7 @@ object and are as follows.
 ![](https://badgen.net/badge/CHAT/%23FFFFFF?color=FFFFFF)
 ![](https://badgen.net/badge/HIGHLIGHT/%23FFD9EF?color=FFD9EF)
 ![](https://badgen.net/badge/SEPARATOR/%234B4B4B?color=4B4B4B)
+![](https://badgen.net/badge/CORPORATE/%232DAFDC?color=2DAFDC)
 
 ![](https://badgen.net/badge/INFO/%23AFAFAF?color=AFAFAF)
 ![](https://badgen.net/badge/SUCCESS/%23A3E635?color=A3E635)

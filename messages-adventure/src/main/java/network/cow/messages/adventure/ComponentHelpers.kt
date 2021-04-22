@@ -47,6 +47,7 @@ fun Component.prepend(prefix: String, color: TextColor?) = prefix.component(colo
 fun Component.prepend(prefix: String, color: NamedTextColor?) = prefix.component(color) + this
 
 fun Component.chat(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.CHAT.toTextColor(), cascadeType)
+fun Component.corporate(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.CORPORATE.toTextColor(), cascadeType)
 
 fun Component.highlight(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.HIGHLIGHT.toTextColor(), cascadeType)
 fun Component.separator(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.SEPARATOR.toTextColor(), cascadeType)
@@ -61,6 +62,7 @@ fun Component.active(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = th
 fun Component.inactive(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.INACTIVE.toTextColor(), cascadeType)
 
 fun TextComponent.Builder.chat(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.CHAT.toTextColor(), cascadeType)
+fun TextComponent.Builder.corporate(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.CORPORATE.toTextColor(), cascadeType)
 
 fun TextComponent.Builder.highlight(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.HIGHLIGHT.toTextColor(), cascadeType)
 fun TextComponent.Builder.separator(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.SEPARATOR.toTextColor(), cascadeType)

@@ -34,6 +34,7 @@ fun String.boxed(color: TextColor?) = "[".component(color) + this + "]".componen
 fun String.boxed(color: NamedTextColor?) = "[".component(color) + this + "]".component(color)
 
 fun String.chat() = this.component(Colors.CHAT)
+fun String.corporate() = this.component(Colors.CORPORATE)
 
 fun String.highlight() = this.component(Colors.HIGHLIGHT)
 fun String.separator() = this.component(Colors.SEPARATOR)

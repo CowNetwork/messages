@@ -9,6 +9,8 @@ object Colors {
 
     @JvmField val CHAT = Color(255, 255, 255) // #FFFFFF
 
+    @JvmField val CORPORATE = Color(45, 175, 220) // #2DAFDC
+
     @JvmField val HIGHLIGHT = Color(255, 217, 239) // #FFD9EF
     @JvmField val SEPARATOR = Color(75, 75, 75) // #4B4B4B
 
