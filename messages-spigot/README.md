@@ -7,12 +7,12 @@ Provides the `messages-adventure` module as spigot plugin and provides additiona
 ### Broadcasts
 
 ```kotlin
-Bukkit.broadcast(component)
-Bukkit.broadcastInfo(component)
-Bukkit.broadcastSuccess(component)
-Bukkit.broadcastWarning(component)
-Bukkit.broadcastError(component)
-Bukkit.broadcastDebug(component)
+Bukkit.getServer().broadcast(component)
+Bukkit.getServer().broadcastInfo(component)
+Bukkit.getServer().broadcastSuccess(component)
+Bukkit.getServer().broadcastWarning(component)
+Bukkit.getServer().broadcastError(component)
+Bukkit.getServer().broadcastDebug(component)
 ```
 
 ### Player messages
