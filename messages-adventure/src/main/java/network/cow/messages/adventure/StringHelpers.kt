@@ -55,3 +55,6 @@ fun String.formatToComponent(vararg params: Component, color: NamedTextColor?) :
 fun String.space() = this.comp().space()
 fun String.newline() = this.comp().newline()
 fun String.newlines(amount: Int) = this.comp().newlines(amount)
+
+fun String.gradient(from: Color, to: Color) = this.comp().gradient(from, to)
+fun String.gradient(colors: Pair<Color, Color>) = this.comp().gradient(colors.first, colors.second)
