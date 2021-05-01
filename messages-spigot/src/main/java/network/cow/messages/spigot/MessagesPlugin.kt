@@ -10,6 +10,11 @@ class MessagesPlugin : JavaPlugin() {
 
     companion object {
         var PREFIX: Component? = null
+
+        @JvmStatic
+        fun setPrefix(prefix: Component?) {
+            PREFIX = prefix
+        }
     }
 
 }

@@ -61,7 +61,7 @@ fun String.translateToComponent(context: Any, vararg params: Component, color: C
 fun String.translateToComponent(context: Any, vararg params: Component, color: TextColor?) : Component = this.component(color).translate(context, *params)
 fun String.translateToComponent(context: Any, vararg params: Component, color: NamedTextColor?) : Component = this.component(color).translate(context, *params)
 
-fun String.translate(locale: String, vararg params: String) : String = LocalizeService.translate(locale, this, *params)
+fun String.translate(locale: String, vararg params: String) : String = LocalizeService.translateSync(locale, this, *params)
 
 fun String.translate(context: Any, vararg params: String) : String {
     val locale = LocalizeService.getLocale(context)
