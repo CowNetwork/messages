@@ -78,8 +78,10 @@ fun TextComponent.Builder.debug(cascadeType: CascadeType = CascadeType.DEEP_ONLY
 fun TextComponent.Builder.active(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.ACTIVE.toTextColor(), cascadeType)
 fun TextComponent.Builder.inactive(cascadeType: CascadeType = CascadeType.DEEP_ONLY_NULL) = this.cascadeColor(Colors.INACTIVE.toTextColor(), cascadeType)
 
-fun TextComponent.gradient(colors: Pair<Color, Color>) = this.gradient(colors.first, colors.second)
-fun TextComponent.gradient(from: Color, to: Color) : Component {
+fun Component.gradient(colors: Pair<Color, Color>) = this.gradient(colors.first, colors.second)
+fun Component.gradient(from: Color, to: Color) : Component {
+    if (this !is TextComponent) return this
+
     val content = this.content().toCharArray()
     var result: Component? = null
     content.forEachIndexed { index, char ->
