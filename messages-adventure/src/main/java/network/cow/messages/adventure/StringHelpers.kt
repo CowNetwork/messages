@@ -1,6 +1,5 @@
 package network.cow.messages.adventure
 
-import dev.benedikt.localize.LocalizeService
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.format.NamedTextColor
@@ -53,20 +52,20 @@ fun String.formatToComponent(vararg params: Component, color: Color? = null) : C
 fun String.formatToComponent(vararg params: Component, color: TextColor?) : Component = this.component(color).format(*params)
 fun String.formatToComponent(vararg params: Component, color: NamedTextColor?) : Component = this.component(color).format(*params)
 
-fun String.translateToComponent(locale: String, vararg params: Component, color: Color? = null) : Component = this.component(color).translate(locale, *params)
-fun String.translateToComponent(locale: String, vararg params: Component, color: TextColor?) : Component = this.component(color).translate(locale, *params)
-fun String.translateToComponent(locale: String, vararg params: Component, color: NamedTextColor?) : Component = this.component(color).translate(locale, *params)
+//fun String.translateToComponent(locale: String, vararg params: Component, color: Color? = null) : Component = this.component(color).translate(locale, *params)
+//fun String.translateToComponent(locale: String, vararg params: Component, color: TextColor?) : Component = this.component(color).translate(locale, *params)
+//fun String.translateToComponent(locale: String, vararg params: Component, color: NamedTextColor?) : Component = this.component(color).translate(locale, *params)
+//
+//fun String.translateToComponent(context: Any, vararg params: Component, color: Color? = null) : Component = this.component(color).translate(context, *params)
+//fun String.translateToComponent(context: Any, vararg params: Component, color: TextColor?) : Component = this.component(color).translate(context, *params)
+//fun String.translateToComponent(context: Any, vararg params: Component, color: NamedTextColor?) : Component = this.component(color).translate(context, *params)
 
-fun String.translateToComponent(context: Any, vararg params: Component, color: Color? = null) : Component = this.component(color).translate(context, *params)
-fun String.translateToComponent(context: Any, vararg params: Component, color: TextColor?) : Component = this.component(color).translate(context, *params)
-fun String.translateToComponent(context: Any, vararg params: Component, color: NamedTextColor?) : Component = this.component(color).translate(context, *params)
-
-fun String.translate(locale: String, vararg params: String) : String = LocalizeService.translateSync(locale, this, *params)
-
-fun String.translate(context: Any, vararg params: String) : String {
-    val locale = LocalizeService.getLocale(context)
-    return this.translate(locale, *params)
-}
+//fun String.translate(locale: String, vararg params: String) : String = LocalizeService.translateSync(locale, this, *params)
+//
+//fun String.translate(context: Any, vararg params: String) : String {
+//    val locale = LocalizeService.getLocale(context)
+//    return this.translate(locale, *params)
+//}
 
 fun String.space() = this.comp().space()
 fun String.newline() = this.comp().newline()

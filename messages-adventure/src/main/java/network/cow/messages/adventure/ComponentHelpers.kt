@@ -1,6 +1,5 @@
 package network.cow.messages.adventure
 
-import dev.benedikt.localize.LocalizeService
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.format.NamedTextColor
@@ -8,7 +7,6 @@ import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.format.TextDecoration
 import network.cow.messages.core.Colors
 import java.awt.Color
-import java.util.spi.LocaleServiceProvider
 
 /**
  * @author Benedikt Wüller
@@ -123,18 +121,18 @@ fun Component.format(vararg params: Component) : Component {
     return component
 }
 
-fun Component.translate(locale: String, vararg params: Component) : Component {
-    if (this !is TextComponent) return this
-    val key = this.content()
-    val format = LocalizeService.getFormatSync(locale, key)
-    return this.content(format).format(*params)
-}
-
-fun Component.translate(context: Any, vararg params: Component) : Component {
-    if (this !is TextComponent) return this
-    val locale = LocalizeService.getLocale(context)
-    return this.translate(locale, *params)
-}
+//fun Component.translate(locale: String, vararg params: Component) : Component {
+//    if (this !is TextComponent) return this
+//    val key = this.content()
+//    val format = LocalizeService.getFormatSync(locale, key)
+//    return this.content(format).format(*params)
+//}
+//
+//fun Component.translate(context: Any, vararg params: Component) : Component {
+//    if (this !is TextComponent) return this
+//    val locale = LocalizeService.getLocale(context)
+//    return this.translate(locale, *params)
+//}
 
 fun Component.space() = this.append(Component.space())
 fun Component.newline() = this.append(Component.newline())

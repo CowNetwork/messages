@@ -8,8 +8,6 @@ import network.cow.messages.adventure.error
 import network.cow.messages.adventure.info
 import network.cow.messages.adventure.prefix
 import network.cow.messages.adventure.success
-import network.cow.messages.adventure.translate
-import network.cow.messages.adventure.translateToComponent
 import network.cow.messages.adventure.warning
 import org.bukkit.command.CommandSender
 
@@ -28,16 +26,16 @@ fun CommandSender.send(message: Component, prefix: Component? = null) {
 }
 
 fun CommandSender.sendTranslated(key: String, vararg params: Component, prefix: Component? = null) {
-    val message = key.translateToComponent(this, *params)
-    this.send(message, prefix)
+//    val message = key.translateToComponent(this, *params)
+//    this.send(message, prefix)
 }
 fun CommandSender.sendTranslated(component: Component, vararg params: Component, prefix: Component? = null) {
-    val message = component.translate(this, *params)
-    this.send(message, prefix)
+//    val message = component.translate(this, *params)
+//    this.send(message, prefix)
 }
 fun CommandSender.sendTranslated(component: TextComponent.Builder, vararg params: Component, prefix: Component? = null) {
-    val message = component.build().translate(this, *params)
-    this.send(message, prefix)
+//    val message = component.build().translate(this, *params)
+//    this.send(message, prefix)
 }
 
 fun CommandSender.sendInfo(message: String, prefix: Component? = null) = this.send(message.info(), prefix)
