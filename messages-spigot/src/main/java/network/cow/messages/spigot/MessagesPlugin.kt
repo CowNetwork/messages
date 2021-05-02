@@ -3,6 +3,7 @@ package network.cow.messages.spigot
 import dev.benedikt.localize.LocalizeService
 import dev.benedikt.localize.json.JsonHttpLocaleProvider
 import net.kyori.adventure.text.Component
+import network.cow.messages.adventure.translate
 import org.bukkit.plugin.java.JavaPlugin
 
 /**

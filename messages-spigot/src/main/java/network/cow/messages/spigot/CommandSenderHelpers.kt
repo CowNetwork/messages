@@ -44,38 +44,38 @@ fun CommandSender.sendInfo(message: String, prefix: Component? = null) = this.se
 fun CommandSender.sendInfo(message: Component, prefix: Component? = null) = this.send(message.info(), prefix)
 fun CommandSender.sendInfo(message: TextComponent.Builder, prefix: Component? = null) = this.send(message.info(), prefix)
 
-fun CommandSender.sendTranslatedInfo(key: String, vararg params: Component, prefix: Component?) = this.sendTranslated(key.info(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedInfo(key: Component, vararg params: Component, prefix: Component?) = this.sendTranslated(key.info(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedInfo(key: TextComponent.Builder, vararg params: Component, prefix: Component?) = this.sendTranslated(key.info(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedInfo(key: String, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.info(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedInfo(key: Component, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.info(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedInfo(key: TextComponent.Builder, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.info(), *params, prefix = prefix)
 
 fun CommandSender.sendSuccess(message: String, prefix: Component? = null) = this.send(message.success(), prefix)
 fun CommandSender.sendSuccess(message: Component, prefix: Component? = null) = this.send(message.success(), prefix)
 fun CommandSender.sendSuccess(message: TextComponent.Builder, prefix: Component? = null) = this.send(message.success(), prefix)
 
-fun CommandSender.sendTranslatedSuccess(key: String, vararg params: Component, prefix: Component?) = this.sendTranslated(key.success(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedSuccess(key: Component, vararg params: Component, prefix: Component?) = this.sendTranslated(key.success(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedSuccess(key: TextComponent.Builder, vararg params: Component, prefix: Component?) = this.sendTranslated(key.success(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedSuccess(key: String, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.success(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedSuccess(key: Component, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.success(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedSuccess(key: TextComponent.Builder, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.success(), *params, prefix = prefix)
 
 fun CommandSender.sendWarning(message: String, prefix: Component? = null) = this.send(message.warning(), prefix)
 fun CommandSender.sendWarning(message: Component, prefix: Component? = null) = this.send(message.warning(), prefix)
 fun CommandSender.sendWarning(message: TextComponent.Builder, prefix: Component? = null) = this.send(message.warning(), prefix)
 
-fun CommandSender.sendTranslatedWarning(key: String, vararg params: Component, prefix: Component?) = this.sendTranslated(key.warning(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedWarning(key: Component, vararg params: Component, prefix: Component?) = this.sendTranslated(key.warning(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedWarning(key: TextComponent.Builder, vararg params: Component, prefix: Component?) = this.sendTranslated(key.warning(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedWarning(key: String, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.warning(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedWarning(key: Component, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.warning(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedWarning(key: TextComponent.Builder, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.warning(), *params, prefix = prefix)
 
 fun CommandSender.sendError(message: String, prefix: Component? = null) = this.send(message.error(), prefix)
 fun CommandSender.sendError(message: Component, prefix: Component? = null) = this.send(message.error(), prefix)
 fun CommandSender.sendError(message: TextComponent.Builder, prefix: Component? = null) = this.send(message.error(), prefix)
 
-fun CommandSender.sendTranslatedError(key: String, vararg params: Component, prefix: Component?) = this.sendTranslated(key.error(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedError(key: Component, vararg params: Component, prefix: Component?) = this.sendTranslated(key.error(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedError(key: TextComponent.Builder, vararg params: Component, prefix: Component?) = this.sendTranslated(key.error(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedError(key: String, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.error(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedError(key: Component, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.error(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedError(key: TextComponent.Builder, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.error(), *params, prefix = prefix)
 
 fun CommandSender.sendDebug(message: String, prefix: Component? = null) = this.send(message.debug(), prefix)
 fun CommandSender.sendDebug(message: Component, prefix: Component? = null) = this.send(message.debug(), prefix)
 fun CommandSender.sendDebug(message: TextComponent.Builder, prefix: Component? = null) = this.send(message.debug(), prefix)
 
-fun CommandSender.sendTranslatedDebug(key: String, vararg params: Component, prefix: Component?) = this.sendTranslated(key.debug(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedDebug(key: Component, vararg params: Component, prefix: Component?) = this.sendTranslated(key.debug(), *params, prefix = prefix)
-fun CommandSender.sendTranslatedDebug(key: TextComponent.Builder, vararg params: Component, prefix: Component?) = this.sendTranslated(key.debug(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedDebug(key: String, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.debug(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedDebug(key: Component, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.debug(), *params, prefix = prefix)
+fun CommandSender.sendTranslatedDebug(key: TextComponent.Builder, vararg params: Component, prefix: Component? = null) = this.sendTranslated(key.debug(), *params, prefix = prefix)
