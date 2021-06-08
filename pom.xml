@@ -12,6 +12,7 @@
     <modules>
         <module>messages-core</module>
         <module>messages-adventure</module>
+        <module>messages-spigot-core</module>
         <module>messages-spigot</module>
     </modules>
 
